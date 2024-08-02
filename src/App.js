@@ -1,3 +1,4 @@
+import { flushSync } from 'react-dom';
 import './App.css';
 
 // function App() {
@@ -8,14 +9,28 @@ import './App.css';
 //   );
 // }
 
+const Person = (props) => {
+	return (
+		<>
+			<h1>Name: {props.name}</h1>
+			<h2>Last Name: {props.lastname}</h2>
+		</>
+	);
+}
+
 
 
 const App = () => {
-	const name = "Mai"
-	let is_show_name = false;
+
+
 	return (
 	  <div className="App">
-		  <h1>Hello, {is_show_name? name : "Anonymous"}!</h1>
+		<h1>Welcome</h1>
+		<hr></hr>
+		<Person name="Mai" lastname="Tunchy"/>	
+		<hr></hr>
+		<Person name={"Mavis"} lastname={"Saeyang"}/>
+		<hr></hr>
 	  </div>
 	);
   }

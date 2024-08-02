@@ -1,36 +1,18 @@
-import { flushSync } from 'react-dom';
+import { useState } from 'react';
 import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-// 		<h1>Hello, React!</h1>
-//     </div>
-//   );
-// }
-
-const Person = (props) => {
-	return (
-		<>
-			<h1>Name: {props.name}</h1>
-			<h2>Last Name: {props.lastname}</h2>
-		</>
-	);
-}
-
 
 
 const App = () => {
-
-
+	const [counter, setCounter] = useState(0);
 	return (
 	  <div className="App">
-		<h1>Welcome</h1>
-		<hr></hr>
-		<Person name="Mai" lastname="Tunchy"/>	
-		<hr></hr>
-		<Person name={"Mavis"} lastname={"Saeyang"}/>
-		<hr></hr>
+		<button onClick={
+			() => setCounter((prevCounter) => prevCounter - 1)}>-
+		</button>
+		<h1>{counter}</h1>
+		<button onClick={
+			() => setCounter((prevCounter) => prevCounter + 1)}>+
+			</button>
 	  </div>
 	);
   }

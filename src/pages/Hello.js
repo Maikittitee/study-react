@@ -3,18 +3,18 @@ import "../App.css"
 import { useLocation } from "react-router-dom";
 
 const Hello = () => {
-	const location = useLocation("Unknow");
-	let name = location.state;
-	if (name == null)
-		name = "Unknow";
-	else 
-		name = name.from;
-
+	const location = useLocation();
 	return (
-		<>
-			<p>
-				Hello, You are {name}
-			</p>
+		<>	
+		{
+			(location.state) ? (
+				<p>
+					Hello, You are {location.state.name}
+				</p>
+			) : (
+				<p> Hello , Anonymous!!</p>
+			)
+		}
 
 		</>
 	);

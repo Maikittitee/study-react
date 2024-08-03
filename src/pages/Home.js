@@ -55,7 +55,7 @@ const Home = () => {
 
 		</div>
 		<footer>
-			<Link to="/hello" state={{ from: "Mai" }}>Hello</Link>
+			<Link to="/hello" state={{ name: "Mai" }}>Hello</Link>
 		</footer>
 		</>
 

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import './App.css'
 import SearchIcon from './search.svg'
 import MovieCard from "./MovieCard";
+import Contact from "./Contact";
+import {Link} from "react-router-dom";
 
 const API_URL = "http://www.omdbapi.com?apikey=" + process.env.REACT_APP_API_KEY;
 
@@ -20,6 +22,7 @@ const App = () => {
 		searchMovie("Spider-man");
 	}, []);
 	return (
+		<>
 		<div className="app">
 			<h1>Hello, Movie</h1>
 			<div className="search">
@@ -35,10 +38,6 @@ const App = () => {
 				/>
 			</div>
 
-			{
-				console.log(movies.length)
-			
-			}
 			{
 				movies?.length > 0 ? (
 					<div className="container">
@@ -56,6 +55,9 @@ const App = () => {
 			}
 
 		</div>
+		<footer>
+		</footer>
+		</>
 
 	);
 }

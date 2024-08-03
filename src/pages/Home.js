@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SearchIcon from '../search.svg'
 import MovieCard from "../MovieCard";
+import { Link } from "react-router-dom";
 import "../App.css"
 
 const API_URL = "http://www.omdbapi.com?apikey=" + process.env.REACT_APP_API_KEY;
@@ -54,6 +55,7 @@ const Home = () => {
 
 		</div>
 		<footer>
+			<Link to="/hello" state={{ from: "Mai" }}>Hello</Link>
 		</footer>
 		</>
 

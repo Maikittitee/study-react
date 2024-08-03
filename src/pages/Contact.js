@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css"
 
 const Contact = () => {
 	return (
@@ -6,7 +7,7 @@ const Contact = () => {
 			<h1>
 				Contact me
 			</h1>
-			<div style={{color: "white"}}>
+			<div>
 				<p>Discord: Maikittitee</p>
 				<p>Github: Maikittitee</p>
 			</div>
